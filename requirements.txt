@@ -2,22 +2,26 @@
 google-play-scraper==1.2.7
 pandas>=2.2
 
-# Tahap 2 - preprocessing + baseline
+# Tahap 2 - preprocessing + baseline + gold set
 scikit-learn
 Sastrawi
 emoji
-nltk
 matplotlib
+openpyxl
 jupyter
 
-# Tahap 3 - IndoBERT + topic modeling (berat, pasang saat dibutuhkan)
-torch
+# Tahap 3 - IndoBERT (fine-tuning)
+# torch TIDAK ditulis di sini: di Windows, "pip install torch" dari PyPI memberi versi CPU.
+# Untuk GPU NVIDIA pasang torch lebih dulu dengan perintah dari pytorch.org, contoh (CUDA 12.6):
+#   pip install torch --index-url https://download.pytorch.org/whl/cu126
+# Cek: python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
 transformers
-datasets
-sentence-transformers
-bertopic
 
-# Tahap 4 - demo
-streamlit
+# Tahap 3b - topic modeling (pasang saat sampai tahap ini)
+# sentence-transformers
+# bertopic
+
+# Tahap 4 - demo (pasang saat sampai tahap ini)
+# streamlit
 
 # Setelah semuanya berjalan, kunci versinya: pip freeze > requirements.lock.txt

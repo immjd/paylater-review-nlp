@@ -1,0 +1,103 @@
+Cek silang dengan notebook: macro-F1 test per seed COCOK (selisih maks 0.00000).
+IndoBERT: 3 seed (7, 42, 2024); bootstrap 10,000 resample, seed acak 0.
+
+==============================================================================
+TEST (label bintang)  |  n = 1305
+==============================================================================
+
+[1] macro-F1 dan accuracy
+  model                                   macro-F1          accuracy
+  baseline TF-IDF + LR                       0.571             0.601
+  IndoBERT seed 7                            0.599             0.613
+  IndoBERT seed 42                           0.600             0.631
+  IndoBERT seed 2024                         0.606             0.644
+  IndoBERT rata-rata 3 seed        0.602 +/- 0.004   0.629 +/- 0.015
+  IndoBERT ensemble (rata2 proba)             0.622             0.648
+
+[2] F1 per kelas
+  model                                neg       neu       pos             (n per kelas)
+  baseline TF-IDF + LR               0.649     0.350     0.712           522 / 262 / 521
+  IndoBERT rata-rata seed            0.676     0.389     0.740
+  IndoBERT ensemble                  0.697     0.420     0.750
+
+[3] Selisih IndoBERT - baseline (bootstrap berpasangan, 10,000 resample)
+  macro-F1 IndoBERT rata-rata seed    +0.031   95% CI [+0.009, +0.054]   P(selisih>0) = 0.998
+           -> IndoBERT lebih tinggi; selang 95% tidak melewati 0
+  macro-F1 IndoBERT ensemble          +0.052   95% CI [+0.027, +0.076]   P(selisih>0) = 1.000
+           -> IndoBERT lebih tinggi; selang 95% tidak melewati 0
+  accuracy IndoBERT rata-rata seed    +0.029   95% CI [+0.007, +0.050]   P(selisih>0) = 0.996
+           -> IndoBERT lebih tinggi; selang 95% tidak melewati 0
+  (variasi antar-seed sendiri: macro-F1 IndoBERT 0.602 +/- 0.004; selang di atas hanya mencerminkan pengambilan sampel ulasan)
+
+[4] Accuracy menurut panjang ulasan (IndoBERT = rata-rata seed)
+  panjang          n      %  baseline  IndoBERT  selisih        95% CI selisih
+  1-3 kata       141    11%     0.723     0.783   +0.059   [-0.005, +0.123]
+  4-7 kata       285    22%     0.688     0.708   +0.020   [-0.026, +0.063]
+  8-15 kata      345    26%     0.583     0.629   +0.046   [+0.006, +0.087]  *
+  >15 kata       534    41%     0.534     0.547   +0.014   [-0.021, +0.050]
+  (* = selang 95% tidak melewati 0. Tiap baris diuji sendiri-sendiri dengan sampel kecil, jadi
+   anggap pola ini petunjuk, bukan bukti, kecuali selisihnya jelas dan konsisten antar baris.)
+
+[5] macro-F1 per aplikasi (IndoBERT = rata-rata seed)
+  aplikasi           n  baseline  IndoBERT  selisih
+  Kredivo          476     0.597     0.618   +0.021
+  HomeCredit       324     0.539     0.599   +0.059
+  Akulaku          505     0.564     0.585   +0.021
+
+==============================================================================
+GOLD (label dari teks)  |  n = 596
+==============================================================================
+
+[1] macro-F1 dan accuracy
+  model                                   macro-F1          accuracy
+  baseline TF-IDF + LR                       0.636             0.639
+  IndoBERT seed 7                            0.676             0.671
+  IndoBERT seed 42                           0.647             0.651
+  IndoBERT seed 2024                         0.661             0.669
+  IndoBERT rata-rata 3 seed        0.661 +/- 0.015   0.664 +/- 0.011
+  IndoBERT ensemble (rata2 proba)             0.669             0.669
+
+[2] F1 per kelas
+  model                                neg       neu       pos             (n per kelas)
+  baseline TF-IDF + LR               0.671     0.485     0.751           240 / 196 / 160
+  IndoBERT rata-rata seed            0.685     0.508     0.792
+  IndoBERT ensemble                  0.685     0.519     0.803
+
+[3] Selisih IndoBERT - baseline (bootstrap berpasangan, 10,000 resample)
+  macro-F1 IndoBERT rata-rata seed    +0.026   95% CI [-0.010, +0.061]   P(selisih>0) = 0.921
+           -> belum bisa dibedakan dari derau pada ukuran sampel ini (selang 95% melewati 0)
+  macro-F1 IndoBERT ensemble          +0.033   95% CI [-0.007, +0.073]   P(selisih>0) = 0.947
+           -> belum bisa dibedakan dari derau pada ukuran sampel ini (selang 95% melewati 0)
+  accuracy IndoBERT rata-rata seed    +0.025   95% CI [-0.010, +0.059]   P(selisih>0) = 0.911
+           -> belum bisa dibedakan dari derau pada ukuran sampel ini (selang 95% melewati 0)
+  (variasi antar-seed sendiri: macro-F1 IndoBERT 0.661 +/- 0.015; selang di atas hanya mencerminkan pengambilan sampel ulasan)
+
+[4] Accuracy menurut panjang ulasan (IndoBERT = rata-rata seed)
+  panjang          n      %  baseline  IndoBERT  selisih        95% CI selisih
+  1-3 kata        59    10%     0.746     0.746   +0.000   [-0.113, +0.113]
+  4-7 kata       134    22%     0.679     0.677   -0.002   [-0.067, +0.060]
+  8-15 kata      161    27%     0.615     0.652   +0.037   [-0.031, +0.108]
+  >15 kata       242    41%     0.607     0.645   +0.037   [-0.022, +0.096]
+  (* = selang 95% tidak melewati 0. Tiap baris diuji sendiri-sendiri dengan sampel kecil, jadi
+   anggap pola ini petunjuk, bukan bukti, kecuali selisihnya jelas dan konsisten antar baris.)
+
+[5] macro-F1 per aplikasi (IndoBERT = rata-rata seed)
+  aplikasi           n  baseline  IndoBERT  selisih
+  Kredivo          219     0.671     0.711   +0.040
+  HomeCredit       149     0.522     0.596   +0.074
+  Akulaku          228     0.668     0.645   -0.023
+
+[6] Confusion matrix terhadap label gold (baris = gold, kolom = prediksi)
+  baseline TF-IDF + LR
+         neg  neu  pos
+    neg  154   65   21
+    neu   58   88   50
+    pos    7   14  139
+  IndoBERT ensemble
+         neg  neu  pos
+    neg  150   80   10
+    neu   43   98   55
+    pos    5    4  151
+
+Catatan: label test = bintang (lemah, ~62% cocok dengan isi teks); label gold = satu pelabel manual (596 ulasan).
+Evaluasi memakai teks yang unik (duplikat sudah dibuang), sehingga ulasan sangat pendek lebih jarang dari di data mentah.

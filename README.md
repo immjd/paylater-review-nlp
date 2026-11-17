@@ -50,11 +50,25 @@ Windows (PowerShell), dari folder proyek:
 ```
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-pip install google-play-scraper==1.2.7 pandas
-python src\scrape_reviews.py com.finaccel.android io.silvrr.installment id.co.myhomecredit --per-score 100
+pip install google-play-scraper==1.2.7 "pandas>=2.2" scikit-learn Sastrawi emoji matplotlib jupyter
+
+# 1. kumpulkan ulasan (jendela waktu disamakan per aplikasi; total sekitar 45-60 menit)
+python src\scrape_reviews.py id.co.myhomecredit --since 2025-01-01
+python src\scrape_reviews.py io.silvrr.installment --since 2026-04-01
+python src\scrape_reviews.py com.finaccel.android --since 2026-03-01
+
+# 2. bersihkan teks, buang duplikat
+python src\preprocess.py
+
+# 3. sampel seimbang + split train/val/test
+python src\make_dataset.py
+
+# 4. baseline TF-IDF + Logistic Regression
+python src\train_baseline.py
 ```
 
-Uji dulu dengan `--per-score 100`; kalau lancar, naikkan ke 1500.
+Folder `data/` dan `models/` tidak ikut repo. Ulasan baru terus muncul di Google Play, jadi scraping ulang
+di waktu lain akan menghasilkan data yang sedikit berbeda dari yang dipakai di bagian Hasil.
 
 ## Hasil
 

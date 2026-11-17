@@ -1,0 +1,22 @@
+# Tahap 1 - pengumpulan data (cukup ini dulu)
+google-play-scraper==1.2.7
+pandas>=2.2
+
+# Tahap 2 - preprocessing + baseline
+scikit-learn
+Sastrawi
+nltk
+matplotlib
+jupyter
+
+# Tahap 3 - IndoBERT + topic modeling (berat, pasang saat dibutuhkan)
+torch
+transformers
+datasets
+sentence-transformers
+bertopic
+
+# Tahap 4 - demo
+streamlit
+
+# Setelah semuanya berjalan, kunci versinya: pip freeze > requirements.lock.txt

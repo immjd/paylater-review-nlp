@@ -1,0 +1,18 @@
+# Lingkungan
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.env
+
+# Data & model tidak di-commit (isi folder saja; .gitkeep tetap ikut)
+data/raw/*
+data/interim/*
+data/labeled/*
+data/processed/*
+models/*
+!data/**/.gitkeep
+!models/.gitkeep
+
+# Sampel kecil yang SUDAH di-mask PII boleh di-commit: taruh di data/sample/ (tidak di-ignore)

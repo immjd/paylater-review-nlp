@@ -5,6 +5,7 @@ pandas>=2.2
 # Tahap 2 - preprocessing + baseline
 scikit-learn
 Sastrawi
+emoji
 nltk
 matplotlib
 jupyter

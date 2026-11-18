@@ -87,10 +87,16 @@ RE_NORMAL = re.compile(r"\b(?:" + "|".join(map(re.escape, sorted(NORMAL_LOKAL, k
 RE_G = re.compile(r"\bg (?=(?:bisa|bs|ada|dapat|dpt|jelas|guna|gunanya|mau|punya|pernah|tau|tahu|usah|pake|pakai|di|dikasih|dikasi|boleh|sempat|lolos|masuk|cair)\b)")
 
 
+# Pola dirancang untuk "bunga nya" (terpisah); penulis sering mengetik rapat ("bunganya"). Pisahkan -nya HANYA pada kata benda
+# berikut, supaya "bunganya" sama dengan "bunga nya" dan kata seperti "hanya", "punya", "bukannya" tidak tersentuh.
+RE_NYA = re.compile(r"\b(bunga|potongan|cicilan|angsuran|tagihan|pembayaran|pinjaman|pengajuan|pencairan|dana|uang|saldo|menagih|penagihan|"
+                    r"privasi|data|telepon|telpon|panggilan|pelayanan|layanan|proses|verifikasi|transfer|transaksi|kredit|plafon)nya\b")
+
+
 def norm(t):
     t = re.sub(r"[\"“”«»]", " ", t)          # tanda kutip nyasar ("muncul\" penawarannya") memutus pola berurutan
     t = " ".join(RE_NORMAL.sub(lambda m: NORMAL_LOKAL[m.group(0)], t).split())
-    return RE_G.sub("tidak ", t)
+    return RE_G.sub("tidak ", RE_NYA.sub(r"\1 nya", t))
 
 
 # (label, [pola, ...]). Urutan = urutan di berkas laporan sebelum diurutkan menurut persen.

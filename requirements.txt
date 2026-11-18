@@ -1,8 +1,10 @@
-# Tahap 1 - pengumpulan data (cukup ini dulu)
+# Dependensi untuk pengembangan lokal (analisis, pelatihan, demo). Untuk deployment demo publik dipakai berkas yang lebih ramping.
+
+# Pengumpulan data
 google-play-scraper==1.2.7
 pandas>=2.2
 
-# Tahap 2 - preprocessing + baseline + gold set
+# Preprocessing, baseline, gold set, grafik
 scikit-learn
 Sastrawi
 emoji
@@ -10,20 +12,20 @@ matplotlib
 openpyxl
 jupyter
 
-# Tahap 3 - IndoBERT (fine-tuning)
+# IndoBERT (fine-tuning lokal)
 # torch TIDAK ditulis di sini: di Windows, "pip install torch" dari PyPI memberi versi CPU.
 # Untuk GPU NVIDIA pasang torch lebih dulu dengan perintah dari pytorch.org, contoh (CUDA 12.6):
 #   pip install torch --index-url https://download.pytorch.org/whl/cu126
 # Cek: python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
 transformers
 
-# Tahap 3b - topic modeling (BERTopic)
+# Topic modeling (BERTopic), dipakai untuk eksplorasi keluhan
 # Jika pip gagal membangun hdbscan di Windows ("Microsoft Visual C++ 14.0 or greater is required"), pasang
 # Build Tools for Visual Studio atau coba: pip install hdbscan --only-binary :all:
 sentence-transformers
 bertopic
 
-# Tahap 4 - demo (pasang saat sampai tahap ini)
-# streamlit
+# Demo
+streamlit
 
 # Setelah semuanya berjalan, kunci versinya: pip freeze > requirements.lock.txt

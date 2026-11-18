@@ -14,5 +14,8 @@ data/processed/*
 models/*
 !data/**/.gitkeep
 !models/.gitkeep
-
-# Sampel kecil yang SUDAH di-mask PII boleh di-commit: taruh di data/sample/ (tidak di-ignore)
+# Lain-lain
+.DS_Store
+Thumbs.db
+*.log
+.streamlit/secrets.toml

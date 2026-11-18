@@ -1,5 +1,7 @@
 Suara Pengguna Paylater
 
+Demo : https://paylater-review.streamlit.app/.
+
 Analisis sentimen dan keluhan pada ulasan tiga aplikasi paylater/kredit digital Indonesia di Google Play (Kredivo, Akulaku, Home Credit).
 
 Status: analisis selesai dan demo lokal berjalan; demo publik sedang disiapkan.
@@ -37,7 +39,7 @@ paylater-review-project/
 ├── src/ skrip (paths.py, scrape_reviews.py, ...)
 ├── models/ checkpoint model (tidak di-commit)
 ├── reports/ ringkasan angka (CSV/teks) dan figures/ (grafik)
-└── app/ demo Streamlit / Hugging Face Spaces
+└── app/ demo Streamlit
 Cara menjalankan
 
 Windows (PowerShell), dari folder proyek:
@@ -159,13 +161,4 @@ Kategori keluhan adalah batas bawah. Pada validasi, sekitar 84% ulasan yang tida
 Cakupan. Hanya ulasan negatif dengan minimal 5 kata yang dianalisis. Ulasan sangat pendek tidak ikut.
 Periode berbeda. Jendela waktu tiap aplikasi tidak sama, dan tren keluhan bisa berubah menurut waktu, jadi perbandingan antar aplikasi bersifat indikatif.
 Satu platform dan satu penilai. Hanya ulasan Google Play, dan seluruh validasi manual dilakukan satu orang.
-Duplikat. Ulasan identik dihitung sekali pada evaluasi model; pada kategori keluhan salinan ikut dihitung, sehingga selang Wilson sedikit terlalu sempit.
-Demo
-
-Demo lokal: tulis sebuah ulasan, lalu lihat prediksi sentimen baseline dan IndoBERT berdampingan, ditambah keluhan yang terdeteksi oleh pola aturan.
-
-streamlit run app\app.py
-
-Demo membutuhkan models\baseline_tfidf_lr.joblib (dari src\train_baseline.py) dan, untuk kolom IndoBERT, models\indobert_final (dari notebook 02). Kalau salah satunya tidak ada, aplikasi tetap jalan dengan model yang tersedia. Model IndoBERT di demo adalah satu model (seed terbaik menurut val) dari satu kali pelatihan, jadi angkanya bisa sedikit berbeda dari tabel di atas yang merata-ratakan 3 seed. Persentase di demo adalah keyakinan model, bukan jaminan benar; sindiran dan ulasan campuran sulit bagi kedua model. Teks yang diketik tidak disimpan.
-
-Demo publik: TODO (Hugging Face Spaces).
+Duplikat. Ulasan identik dihitung sekali pada evaluasi model; pada kategori keluhan salinan ikut dihitung.

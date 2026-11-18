@@ -1,0 +1,12 @@
+# Dependensi demo publik (Streamlit Community Cloud membaca berkas ini karena letaknya di folder app).
+# Versi sama dengan lingkungan lokal tempat model baseline disimpan.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+transformers==5.23.0
+scikit-learn==1.9.1
+joblib==1.6.0
+pandas==3.1.1
+numpy==2.5.5
+emoji==2.16.0
+Sastrawi==1.0.1
+streamlit==1.67.0

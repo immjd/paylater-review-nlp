@@ -12,6 +12,7 @@ data/interim/*
 data/labeled/*
 data/processed/*
 models/*
+!models/baseline_tfidf_lr.joblib
 !data/**/.gitkeep
 !models/.gitkeep
 # Lain-lain

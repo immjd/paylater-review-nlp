@@ -1,0 +1,20 @@
+kategori,ukuran,n_dinilai,n_benar,nilai,lo95,hi95,n_ragu,n_kosong
+ditolak,presisi,12,10,0.833,0.552,0.953,0,0
+limit_turun,presisi,12,11,0.917,0.646,0.985,0,0
+tidak_bisa_pinjam_lagi,presisi,12,11,0.917,0.646,0.985,0,0
+penagihan,presisi,12,6,0.5,0.254,0.746,0,0
+spam_telepon,presisi,12,7,0.583,0.32,0.807,0,0
+login_akun,presisi,12,10,0.833,0.552,0.953,0,0
+captcha,presisi,12,12,1.0,0.757,1.0,0,0
+app_error,presisi,12,10,0.833,0.552,0.953,0,0
+biaya,presisi,12,10,0.833,0.552,0.953,0,0
+pencairan_pembayaran,presisi,12,7,0.583,0.32,0.807,0,0
+data_privasi,presisi,12,10,0.833,0.552,0.953,0,0
+tagihan_asing,presisi,12,10,0.833,0.552,0.953,0,0
+customer_service,presisi,12,9,0.75,0.468,0.911,0,0
+belanja_refund,presisi,12,7,0.583,0.32,0.807,0,0
+lucky_draw,presisi,12,12,1.0,0.757,1.0,0,0
+penipuan,presisi,12,6,0.5,0.254,0.746,0,0
+akses_kredit,presisi,12,12,1.0,0.757,1.0,0,0
+lancar_tapi_ditutup,presisi,12,12,1.0,0.757,1.0,0,0
+(tanpa kategori spesifik),terlewat,50,40,0.8,0.67,0.888,0,0

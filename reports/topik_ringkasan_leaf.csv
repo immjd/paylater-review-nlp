@@ -1,0 +1,26 @@
+topik,nama,kata_kunci,n_teks_unik,pct_teks_unik,n_ulasan,pct_ulasan,n_Kredivo,pct_Kredivo,n_Akulaku,pct_Akulaku,n_HomeCredit,pct_HomeCredit
+0,,"debt collector, debt, collector, pinjaman, kredit, pinjam, pinjaman tidak, bisa pinjam",1623,9.9,1623,9.8,444,9.9,748,12.6,431,7.1
+1,,"data, hapus, pinjaman, data tidak, uninstall, gunakan, tanggal, salah gunakan",1372,8.3,1373,8.3,355,7.9,640,10.7,378,6.2
+2,,"telat, bayar, pernah telat, telat bayar, bisa pakai, tagihan, denda, pembayaran",810,4.9,816,4.9,234,5.2,432,7.3,150,2.5
+3,,"telpon, telepon, mengganggu, tiap hari, menelepon, tiap, menawarkan, ganggu",700,4.3,700,4.2,53,1.2,72,1.2,575,9.5
+4,,"bisa buka, buka, dibuka, bisa dibuka, berguna, jelek, tolol, tidak berguna",560,3.4,565,3.4,112,2.5,181,3.0,272,4.5
+5,,"akun, pin, blokir, permanen, akun blokir, lupa pin, blokir permanen, pin tidak",438,2.7,440,2.7,281,6.3,36,0.6,123,2.0
+6,,"data, hapus data, salah gunakan, data data, hapus, jangan salah, salah, gunakan",419,2.5,420,2.5,140,3.1,129,2.2,151,2.5
+7,,"limit tidak, limit, ada limit, bisa pakai, bisa dipakai, dipakai, bisa gunakan, punya limit",351,2.1,353,2.1,91,2.0,185,3.1,77,1.3
+8,,"tidak setuju, setuju, ditolak, pengajuan, tidak setujui, pengajuannya, selalu ditolak, belum apa",325,2.0,326,2.0,112,2.5,92,1.5,122,2.0
+9,,"login, bisa login, mau login, login tidak, log, login susah, browser, log in",298,1.8,298,1.8,21,0.5,10,0.2,267,4.4
+10,,"service, customer, customer service, refund, chat, toko, seller, barang",252,1.5,252,1.5,78,1.7,133,2.2,41,0.7
+11,,"bunga, bunga terlalu, bunganya, gede, besar, bunga tidak, tinggi, bunga gede",232,1.4,232,1.4,89,2.0,67,1.1,76,1.3
+12,,"spam, spam telpon, spam telepon, telpon, sudah spam, banyak spam, spam call, telepon",227,1.4,227,1.4,29,0.6,88,1.5,110,1.8
+13,,"aku, dulu kalau, tolak, coba dulu, setuju, dulu, pengajuan, niatnya",215,1.3,215,1.3,62,1.4,93,1.6,60,1.0
+14,,"hp, hp tidak, no hp, beli hp, no, ganti, hp baru, ganti hp",213,1.3,213,1.3,33,0.7,50,0.8,130,2.1
+15,,"download, update, install, bisa install, download tidak, bisa download, jangan download, update tidak",209,1.3,209,1.3,30,0.7,42,0.7,137,2.3
+16,,"draw, lucky, lucky draw, spin, event, scam, perak, hadiah",158,1.0,158,1.0,9,0.2,145,2.4,4,0.1
+17,,"tenor, menunggu, bulan, menunggu bulan, nambah, tenor bulan, nambah tenor, 30 hari",128,0.8,128,0.8,76,1.7,21,0.4,31,0.5
+18,,"whatsapp, whatsapp tidak, lewat whatsapp, login, bisa login, link whatsapp, link, via whatsapp",112,0.7,112,0.7,27,0.6,23,0.4,62,1.0
+19,,"juta, juta tidak, limit juta, 300, 15 juta, 300ribu, limit, 15",106,0.6,106,0.6,34,0.8,52,0.9,20,0.3
+20,,"wajah, foto, verifikasi wajah, selfie, scan, terang, foto ktp, verifikasi",105,0.6,105,0.6,8,0.2,32,0.5,65,1.1
+21,,"robot, bukan robot, buktikan, bukan, kamu bukan, buktikan kamu, buktikan bukan, verifikasi bukan",95,0.6,95,0.6,3,0.1,0,0.0,92,1.5
+22,,"buka, creditnya, bisa buka, bisa download, update, penawaran pembiayaan, bisa login, kawan",81,0.5,81,0.5,1,0.0,0,0.0,80,1.3
+23,,"daftar, baru daftar, daftar sudah, daftar tidak, kali daftar, mau daftar, daftar tolak, daftar langsung",76,0.5,78,0.5,47,1.1,9,0.2,22,0.4
+-1,(lainnya / tak masuk topik),,7357,44.7,7360,44.6,2103,47.0,2675,44.9,2582,42.6

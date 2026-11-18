@@ -1,0 +1,50 @@
+Pengaturan: embed=paraphrase-multilingual-MiniLM-L12-v2 | min_kata=5 | min_cluster_size=66 | nr_topics=15 | outlier dikurangi=tidak | seed=42
+==============================================================================
+CAKUPAN
+==============================================================================
+  aplikasi      ulasan negatif  dianalisis     %
+  Kredivo                5,520       4,472   81%
+  Akulaku                7,139       5,955   83%
+  HomeCredit             7,269       6,058   83%
+  'ulasan negatif' = bintang 1-2 berstatus unik/duplikat. 'dianalisis' = teksnya (atau salinannya) masuk model:
+  minimal 5 kata (emoji tidak dihitung). Teks lebih pendek tidak dianalisis; hasil di bawah TIDAK mewakili keluhan satu-dua kata.
+  Teks unik yang dimodelkan: 16,462 | topik: 14 | outlier (tak masuk topik): 35% teks unik
+
+==============================================================================
+TOPIK KELUHAN (persen = porsi ulasan negatif yang dianalisis, termasuk salinan)
+==============================================================================
+   id  %semua  ulasan    Kredivo   Akulaku HomeCredi   kata kunci
+    0   20.6%   3,402      22.0%     28.4%     12.0%   pinjaman, pinjam, bayar, telat, kredit, padahal
+    1    7.7%   1,268       3.7%      5.5%     12.8%   spam, telpon, telepon, mengganggu, tiap hari, menelepon
+    2    6.4%   1,054       5.5%      9.3%      4.2%   pinjaman, bayar, pinjam, telat, aneh, tepat
+    3    6.0%     992       6.7%      4.3%      7.2%   data, hapus, hapus data, salah gunakan, data tidak, data data
+    4    6.0%     989       7.6%      5.3%      5.5%   tolak, setuju, pengajuan, daftar, ditolak, tidak setuju
+    5    5.2%     850       7.4%      1.2%      7.5%   login, akun, whatsapp, bisa login, pin, blokir
+    6    4.7%     774       3.2%      3.7%      6.8%   download, bisa buka, update, buka, install, dibuka
+    7    2.8%     459       2.8%      4.0%      1.6%   limit, limit tidak, ada limit, bisa pakai, bisa dipakai, dipakai
+    8    1.4%     232       2.0%      1.1%      1.3%   bunga, bunganya, bunga terlalu, gede, besar, tinggi
+    9    1.3%     213       0.7%      0.8%      2.1%   hp, hp tidak, no hp, no, beli hp, ganti
+   10    1.0%     158       0.2%      2.4%      0.1%   draw, lucky, lucky draw, spin, event, scam
+   11    0.8%     128       1.7%      0.4%      0.5%   bulan, tenor, menunggu, menunggu bulan, nambah, tenor bulan
+   12    0.6%     105       0.2%      0.5%      1.1%   wajah, foto, verifikasi wajah, selfie, scan, terang
+   13    0.6%      95       0.1%      0.0%      1.5%   robot, bukan robot, buktikan, bukan, kamu bukan, buktikan kamu
+   -1   35.0%   5,766      36.3%     33.0%     35.9%   (lainnya / tak masuk topik)
+
+==============================================================================
+3 KELUHAN TERATAS PER APLIKASI (tanpa 'lainnya')
+==============================================================================
+  Kredivo:
+     22.0%  topik 0: pinjaman, pinjam, bayar, telat, kredit
+      7.6%  topik 4: tolak, setuju, pengajuan, daftar, ditolak
+      7.4%  topik 5: login, akun, whatsapp, bisa login, pin
+  Akulaku:
+     28.4%  topik 0: pinjaman, pinjam, bayar, telat, kredit
+      9.3%  topik 2: pinjaman, bayar, pinjam, telat, aneh
+      5.5%  topik 1: spam, telpon, telepon, mengganggu, tiap hari
+  HomeCredit:
+     12.8%  topik 1: spam, telpon, telepon, mengganggu, tiap hari
+     12.0%  topik 0: pinjaman, pinjam, bayar, telat, kredit
+      7.5%  topik 5: login, akun, whatsapp, bisa login, pin
+
+  Catatan: tiap aplikasi di-scrape pada rentang waktu berbeda; bandingkan persen, bukan jumlah.
+  Topik adalah KELOMPOK TEKS MIRIP dari model, bukan kategori resmi: nama dan batasnya perlu dibaca manual.

@@ -1,0 +1,50 @@
+======================================================================================
+KATEGORI KELUHAN BERBASIS ATURAN (ulasan negatif yang dianalisis; MULTI-LABEL, persen tidak dijumlahkan)
+======================================================================================
+  Dianalisis: 16,485 ulasan (16,462 teks unik) | Kredivo 4,472 | Akulaku 5,955 | HomeCredit 6,058
+  Populasi sama dengan topic_model.py. Tiap aplikasi di-scrape pada rentang waktu berbeda: bandingkan PERSEN.
+
+KATEGORI KELUHAN SPESIFIK (urut dari paling sering)
+   %semua  ulasan    Kredivo   Akulaku HomeCredi   kategori
+    19.1%   3,150      18.9%     23.8%     14.7%   Pengajuan ditolak
+    13.8%   2,274      11.0%     22.8%      7.0%   Tidak bisa mengajukan / pinjam / pakai limit
+    10.0%   1,656      13.8%      3.2%     14.0%   Login / OTP / verifikasi wajah / akun diblokir
+     7.5%   1,239      11.6%      5.2%      6.8%   Denda / bunga / biaya
+     7.3%   1,210       2.0%      4.2%     14.3%   Spam & telepon marketing berlebihan
+     7.2%   1,192       6.1%      4.5%     10.8%   Data pribadi / hapus data / izin akses
+     6.8%   1,120       3.4%      3.7%     12.4%   Aplikasi error / tidak bisa dibuka / lemot
+     6.5%   1,075       4.8%      7.9%      6.4%   Limit turun / hilang / kecil / tidak naik
+     4.8%     792       7.8%      3.4%      3.9%   Penagihan / debt collector / teror soal utang
+     4.3%     706       2.6%      6.9%      3.0%   Penipuan / bohong / janji palsu
+     3.3%     541       4.2%      3.2%      2.6%   Customer service tidak membantu
+     2.2%     359       1.9%      3.9%      0.6%   Belanja / pulsa / listrik / barang / refund
+     1.6%     259       2.0%      1.8%      1.0%   Dana / pembayaran tidak masuk, proses lama
+     0.8%     124       0.0%      2.0%      0.0%   Lucky draw / undian / hadiah
+     0.6%      92       1.2%      0.6%      0.1%   Skor kredit / SLIK jelek atau turun
+     0.5%      82       0.0%      0.0%      1.3%   CAPTCHA / verifikasi 'bukan robot'
+     0.5%      88       1.2%      0.4%      0.2%   Tagihan muncul padahal tidak pernah pinjam
+
+KATEGORI GABUNGAN (tumpang-tindih dengan kategori dasar)
+   %semua  ulasan    Kredivo   Akulaku HomeCredi   kategori
+    35.5%   5,849      32.4%     48.2%     25.3%   GABUNGAN: akses kredit tertutup (ditolak / limit turun / tidak bisa pinjam lagi)
+    10.4%   1,713       8.5%     18.0%      4.4%   GABUNGAN: bayar lancar / lunas, tetapi akses kredit tertutup
+
+RINGKASAN
+   %semua  ulasan    Kredivo   Akulaku HomeCredi   kategori
+    34.1%   5,625      32.6%     36.4%     33.0%   Memuat kata makian / kekecewaan umum (boleh bersama keluhan lain)
+    72.7%  11,985      72.0%     72.4%     73.5%   RINGKASAN: menyebut minimal satu keluhan spesifik
+     9.0%   1,481       8.5%      9.1%      9.2%   RINGKASAN: hanya makian / kekecewaan umum, tanpa keluhan spesifik
+    18.3%   3,019      19.5%     18.5%     17.3%   RINGKASAN: tidak masuk kategori mana pun
+
+  Selang kepercayaan 95% (Wilson, ulasan dianggap independen; salinan membuatnya sedikit terlalu sempit) ada di reports/kategori_keluhan.csv.
+
+  3 kategori dasar teratas per aplikasi:
+    Kredivo: Pengajuan ditolak 18.9%; Login / OTP / verifikasi wajah / akun diblokir 13.8%; Denda / bunga / biaya 11.6%
+    Akulaku: Pengajuan ditolak 23.8%; Tidak bisa mengajukan / pinjam / pakai limit 22.8%; Limit turun / hilang / kecil / tidak naik 7.9%
+    HomeCredit: Pengajuan ditolak 14.7%; Spam & telepon marketing berlebihan 14.3%; Login / OTP / verifikasi wajah / akun diblokir 14.0%
+
+  Ulasan tanpa kategori apa pun: 3,019 (3,017 teks unik). Kata paling sering (jumlah TEKS UNIK, minimal 5) - petunjuk pola yang masih kurang:
+    kata  : tidak (1563), bisa (826), sudah (785), bayar (497), ada (468), mau (405), padahal (395), pinjaman (310), limit (296), pernah (279), telat (252), kalau (249), pakai (235), terus (229), malah (217)
+    bigram: tidak bisa (545), tidak ada (199), tidak pernah (197), jatuh tempo (118), sudah bayar (95), pernah telat (93), sudah lunas (78), padahal tidak (76), tiba tiba (69), telat bayar (67), tepat waktu (66), mau bayar (61), padahal sudah (60), terima kasih (60), bisa pakai (59)
+
+Sampel validasi: 48 baris -> data\labeled\validasi_kategori_putaran3.xlsx  (lokal, tidak ikut git)

@@ -1,0 +1,16 @@
+topik,nama,kata_kunci,n_teks_unik,pct_teks_unik,n_ulasan,pct_ulasan,n_Kredivo,pct_Kredivo,n_Akulaku,pct_Akulaku,n_HomeCredit,pct_HomeCredit
+0,,"pinjaman, pinjam, bayar, telat, kredit, padahal, debt, debt collector",3396,20.6,3402,20.6,984,22.0,1694,28.4,724,12.0
+1,,"spam, telpon, telepon, mengganggu, tiap hari, menelepon, tiap, ganggu",1268,7.7,1268,7.7,165,3.7,327,5.5,776,12.8
+2,,"pinjaman, bayar, pinjam, telat, aneh, tepat, tidak jelas, tepat waktu",1054,6.4,1054,6.4,246,5.5,552,9.3,256,4.2
+3,,"data, hapus, hapus data, salah gunakan, data tidak, data data, gunakan, salah",990,6.0,992,6.0,298,6.7,258,4.3,436,7.2
+4,,"tolak, setuju, pengajuan, daftar, ditolak, tidak setuju, tolak terus, susah",986,6.0,989,6.0,341,7.6,315,5.3,333,5.5
+5,,"login, akun, whatsapp, bisa login, pin, blokir, mau login, permanen",848,5.2,850,5.2,329,7.4,69,1.2,452,7.5
+6,,"download, bisa buka, update, buka, install, dibuka, bisa dibuka, tidak bisa",769,4.7,774,4.7,142,3.2,223,3.7,409,6.8
+7,,"limit, limit tidak, ada limit, bisa pakai, bisa dipakai, dipakai, juta, bisa gunakan",457,2.8,459,2.8,125,2.8,237,4.0,97,1.6
+8,,"bunga, bunganya, bunga terlalu, gede, besar, tinggi, bunga tidak, terlalu",232,1.4,232,1.4,89,2.0,67,1.1,76,1.3
+9,,"hp, hp tidak, no hp, no, beli hp, ganti, hp baru, ganti hp",213,1.3,213,1.3,33,0.7,50,0.8,130,2.1
+10,,"draw, lucky, lucky draw, spin, event, scam, perak, hadiah",158,1.0,158,1.0,9,0.2,145,2.4,4,0.1
+11,,"bulan, tenor, menunggu, menunggu bulan, nambah, tenor bulan, nambah tenor, 30 hari",128,0.8,128,0.8,76,1.7,21,0.4,31,0.5
+12,,"wajah, foto, verifikasi wajah, selfie, scan, terang, foto ktp, verifikasi",105,0.6,105,0.6,8,0.2,32,0.5,65,1.1
+13,,"robot, bukan robot, buktikan, bukan, kamu bukan, buktikan kamu, buktikan bukan, verifikasi bukan",95,0.6,95,0.6,3,0.1,0,0.0,92,1.5
+-1,(lainnya / tak masuk topik),,5763,35.0,5766,35.0,1624,36.3,1965,33.0,2177,35.9

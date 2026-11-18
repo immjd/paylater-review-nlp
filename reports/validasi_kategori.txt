@@ -1,0 +1,28 @@
+======================================================================================
+VALIDASI MANUAL KATEGORI (presisi = dari ulasan yang dicocokkan pola, berapa yang memang mengeluhkan hal itu)
+======================================================================================
+  kategori                   dinilai  benar  presisi  selang 95%     ragu kosong   perkiraan % terkoreksi
+  ditolak                         12     10      83%  [ 55- 95%]      0      0   15.8% (dari 19.0%)
+  limit_turun                     12     11      92%  [ 65- 99%]      0      0   5.6% (dari 6.1%)
+  tidak_bisa_pinjam_lagi          12     11      92%  [ 65- 99%]      0      0   11.2% (dari 12.2%)
+  penagihan                       12      6      50%  [ 25- 75%]      0      0   2.5% (dari 5.0%)
+  spam_telepon                    12      7      58%  [ 32- 81%]      0      0   4.8% (dari 8.2%)
+  login_akun                      12     10      83%  [ 55- 95%]      0      0   9.0% (dari 10.8%)
+  captcha                         12     12     100%  [ 76-100%]      0      0   0.5% (dari 0.5%)
+  app_error                       12     10      83%  [ 55- 95%]      0      0   5.6% (dari 6.7%)
+  biaya                           12     10      83%  [ 55- 95%]      0      0   6.2% (dari 7.4%)
+  pencairan_pembayaran            12      7      58%  [ 32- 81%]      0      0   1.3% (dari 2.3%)
+  data_privasi                    12     10      83%  [ 55- 95%]      0      0   5.8% (dari 7.0%)
+  tagihan_asing                   12     10      83%  [ 55- 95%]      0      0   0.4% (dari 0.5%)
+  customer_service                12      9      75%  [ 47- 91%]      0      0   3.7% (dari 4.9%)
+  belanja_refund                  12      7      58%  [ 32- 81%]      0      0   4.2% (dari 7.2%)
+  lucky_draw                      12     12     100%  [ 76-100%]      0      0   0.8% (dari 0.8%)
+  penipuan                        12      6      50%  [ 25- 75%]      0      0   2.6% (dari 5.3%)
+  akses_kredit                    12     12     100%  [ 76-100%]      0      0   33.9% (dari 33.9%)
+  lancar_tapi_ditutup             12     12     100%  [ 76-100%]      0      0   10.0% (dari 10.0%)
+
+  Ulasan TANPA kategori spesifik: 50 dinilai, 40 ternyata menyebut keluhan spesifik yang terlewat = 80% [selang 95% 67-89%] (ragu 0, kosong 0)
+    -> ~21.1% ulasan negatif menyebut keluhan spesifik yang terlewat (dari 26.4% tanpa kategori spesifik)
+
+  'perkiraan % terkoreksi' = persen tercetak x presisi: kasar, dan selang presisi lebar bila sampel kecil (lihat selang 95%).
+  Baris tanpa nilai ('kosong') tidak dihitung; ulasan yang kamu tandai '?' juga tidak dihitung.

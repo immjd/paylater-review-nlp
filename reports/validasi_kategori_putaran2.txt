@@ -1,0 +1,22 @@
+======================================================================================
+VALIDASI MANUAL KATEGORI (presisi = dari ulasan yang dicocokkan pola, berapa yang memang mengeluhkan hal itu)
+======================================================================================
+  kategori                   dinilai  benar  presisi  selang 95%     ragu kosong   perkiraan % terkoreksi
+  limit_turun                     10      8      80%  [ 49- 94%]      0      0   5.2% (dari 6.5%)
+  tidak_bisa_pinjam_lagi          10      8      80%  [ 49- 94%]      0      0   11.0% (dari 13.8%)
+  penagihan                       10      9      90%  [ 60- 98%]      0      0   4.3% (dari 4.8%)
+  spam_telepon                    10     10     100%  [ 72-100%]      0      0   7.3% (dari 7.3%)
+  login_akun                      10      6      60%  [ 31- 83%]      0      0   7.1% (dari 11.9%)
+  biaya                           10      8      80%  [ 49- 94%]      0      0   6.0% (dari 7.5%)
+  pencairan_pembayaran            10      9      90%  [ 60- 98%]      0      0   1.4% (dari 1.6%)
+  skor_kredit                     10     10     100%  [ 72-100%]      0      0   0.6% (dari 0.6%)
+  customer_service                10      6      60%  [ 31- 83%]      0      0   2.3% (dari 3.8%)
+  belanja_refund                  10      5      50%  [ 24- 76%]      0      0   2.2% (dari 4.4%)
+  penipuan                        10      7      70%  [ 40- 89%]      0      0   3.1% (dari 4.4%)
+  lancar_tapi_ditutup             10     10     100%  [ 72-100%]      0      0   10.4% (dari 10.4%)
+
+  Ulasan TANPA kategori spesifik: 50 dinilai, 42 ternyata menyebut keluhan spesifik yang terlewat = 84% [selang 95% 71-92%] (ragu 0, kosong 0)
+    -> ~21.7% ulasan negatif menyebut keluhan spesifik yang terlewat (dari 25.8% tanpa kategori spesifik)
+
+  'perkiraan % terkoreksi' = persen tercetak x presisi: kasar, dan selang presisi lebar bila sampel kecil (lihat selang 95%).
+  Baris tanpa nilai ('kosong') tidak dihitung; ulasan yang kamu tandai '?' juga tidak dihitung.

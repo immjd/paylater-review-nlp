@@ -1,0 +1,5 @@
+kategori,ukuran,n_dinilai,n_benar,nilai,lo95,hi95,n_ragu,n_kosong
+login_akun,presisi,12,11,0.917,0.646,0.985,0,0
+customer_service,presisi,12,7,0.583,0.32,0.807,0,0
+belanja_refund,presisi,12,11,0.917,0.646,0.985,0,0
+penipuan,presisi,12,9,0.75,0.468,0.911,0,0

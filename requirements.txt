@@ -17,9 +17,11 @@ jupyter
 # Cek: python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
 transformers
 
-# Tahap 3b - topic modeling (pasang saat sampai tahap ini)
-# sentence-transformers
-# bertopic
+# Tahap 3b - topic modeling (BERTopic)
+# Jika pip gagal membangun hdbscan di Windows ("Microsoft Visual C++ 14.0 or greater is required"), pasang
+# Build Tools for Visual Studio atau coba: pip install hdbscan --only-binary :all:
+sentence-transformers
+bertopic
 
 # Tahap 4 - demo (pasang saat sampai tahap ini)
 # streamlit

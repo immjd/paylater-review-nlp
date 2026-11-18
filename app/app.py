@@ -71,7 +71,7 @@ def muat_baseline():
     return joblib.load(f), kolom, stop
 
 
-@st.cache_resource(show_spinner="Memuat IndoBERT ...")
+@st.cache_resource(show_spinner="Memuat IndoBERT (pertama kali agak lama) ...")
 def muat_indobert():
     sumber = os.environ.get("INDOBERT_REPO") or str(DIR_MODEL / "indobert_final")
     if not os.environ.get("INDOBERT_REPO") and not Path(sumber).exists():
@@ -151,7 +151,7 @@ baseline, indobert = muat_baseline(), muat_indobert()
 status = [f"Baseline: {'siap' if baseline else 'belum ada'}", f"IndoBERT: {'siap' if indobert else 'belum ada'}"]
 st.caption("Model  |  " + "  |  ".join(status))
 
-tab_coba, tab_tentang = st.tabs(["Coba sendiri", "Keluhan per aplikasi", "Tentang & keterbatasan"])
+tab_coba, tab_tentang = st.tabs(["Coba sendiri", "Tentang & keterbatasan"])
 
 with tab_coba:
     if "teks" not in st.session_state:
@@ -212,19 +212,10 @@ with tab_coba:
             st.caption("Keluhan dideteksi dengan pola aturan, bukan model. Analisis keluhan pada proyek ini hanya untuk ulasan 5 kata ke atas."
                        + (" Teks ini kurang dari 5 kata." if len(t.split()) < 5 else ""))
 
-# with tab_hasil:
-#     st.write("Persen ulasan negatif (minimal 5 kata) yang menyebut tiap keluhan. Satu ulasan boleh masuk beberapa kategori.")
-#     for nama in ("keluhan_per_aplikasi.png", "akses_kredit.png"):
-#         f = AKAR / "reports" / "figures" / nama
-#         if f.exists():
-#             st.image(str(f), use_container_width=True)
-#         else:
-#             st.info(f"{nama} belum ada. Jalankan `python src\\buat_grafik.py`.")
-
 with tab_tentang:
     st.markdown(
         """
-**Data.** Ulasan publik Google Play untuk Kredivo, Akulaku, dan Home Credit.
+**Data.** Ulasan publik Google Play untuk Kredivo, Akulaku, dan Home Credit (scraping 17 November 2026).
 
 **Model.** Baseline TF-IDF + Logistic Regression dibandingkan dengan IndoBERT hasil fine-tuning. Selisihnya kecil
 (sekitar 0,03 macro-F1): signifikan terhadap label bintang, tetapi belum bisa dibedakan dari derau pada label manual.
